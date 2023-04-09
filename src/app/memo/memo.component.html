@@ -1,0 +1,12 @@
+<div class="memo">
+  <div class="but">
+    <H1>MEMO</H1>
+    <button class="button" (click)="reset()">Iniciar Juego</button>
+  </div>
+  <div class="game">
+    <div *ngFor="let card of cards">
+      <img class="img" src="{{ card.flipped ? card.img : '/assets/universe.svg' }}" alt="{{ card.name }}"
+        [class.flipped]="card.flipped" (click)="flipCard(card)" />
+    </div>
+  </div>
+</div>

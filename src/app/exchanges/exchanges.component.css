@@ -1,0 +1,65 @@
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.number {
+  height: 30px;
+  width: 100px;
+  border-style: none;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.329);
+}
+
+.display {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: space-between;
+  margin: 40px;
+}
+
+.div {
+  width: 120px;
+  display: flex;
+  border-width: 1px;
+  align-content: center;
+  justify-content: center;
+  padding: 0 auto;
+  margin: 0 auto;
+}
+
+.select {
+  margin: 0px auto;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(107, 191, 140);
+  border-radius: 30px;
+  border-style: hidden;
+  display: flex;
+  justify-content: space-around;
+}
+
+.select:hover {
+  background-color: rgba(0, 205, 17, 0.946);
+  transform: scale(1.2);
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.option {
+  margin-left: 10px;
+}
+
+.flag {
+  height: 17px;
+  margin: auto;
+}/*# sourceMappingURL=exchanges.component.css.map */

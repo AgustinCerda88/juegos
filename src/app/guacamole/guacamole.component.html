@@ -1,0 +1,17 @@
+<div class="guaca">
+  <h1>WHACK A MOLE</h1>
+  <button class="button" (click)="startGame()">Start Game</button>
+  <h2>Your score:</h2>
+  <h2 data-function="score">{{ score }}</h2>
+  <h2>Seconds left:</h2>
+  <h2 data-function="time-left">{{ timeLeft }}</h2>
+  <div class="grid">
+    <div class="b-grid">
+      <div data-function="square" class="b-square" *ngFor="let square of squares; let i = index"
+        (click)="handleSquareClick(i)" [ngClass]="{ 'b-mole': i === hitPosition }"></div>
+    </div>
+  </div>
+  <div *ngIf="gameOver">
+    <h2>Your final score is {{ score }}</h2>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.button {
+  margin: 40px auto;
+  width: 150px;
+  height: 50px;
+  background-color: lightblue;
+  border-radius: 30px;
+  border-style: hidden;
+}
+
+.button:hover {
+  background-color: rgba(27, 197, 253, 0.727);
+  transform: scale(1.2);
+}/*# sourceMappingURL=tesoro.component.css.map */

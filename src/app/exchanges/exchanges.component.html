@@ -1,0 +1,20 @@
+<div class="formulario">
+    <h1 class>Tipos de cambio</h1>
+    <p>Fecha del tipo de cambio: {{date}} </p>
+    <h3 class>Introduce el importe a cambiar</h3>
+    <input type="number" class="number" placeholder="{{cambio === 0 ? '' : cambio}}" [(ngModel)]="cambio">
+    <p>Elige la moneda: </p>
+    <select class="select" *ngIf="exchanges" (change)="onSelectChange($event)" [(ngModel)]="selectedExchange">
+        <option *ngFor="let coso of exchanges" [value]="coso.name">{{coso.name}}</option>
+    </select>
+    <div class="display" *ngIf="exchanges">
+        <div class="coin" *ngFor="let item of exchanges">
+            <div class="head">
+                <div><img class="flag" src="../../assets/{{item.name}}.png" alt=""></div>
+                <p class="div">{{item.name}}</p>
+            </div>
+            <div class="div__cambio">{{cambio < 0 || cambio===0 || !cambio ? item.value.toFixed(3) : (item.value *
+                    cambio).toFixed(3)}} </div>
+            </div>
+        </div>
+    </div >

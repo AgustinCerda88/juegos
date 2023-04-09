@@ -1,0 +1,25 @@
+<div class="tesoro">
+  <h1>BUSQUEDA DEL TESORO</h1>
+  <h2>Attempts: <span>{{attempts}}</span></h2>
+  <h3>Elige el tamaño del juego</h3>
+  <div class="form">
+    <div>
+      <label>Filas:</label>
+      <input type="number" name="filas" [(ngModel)]="rows">
+    </div>
+    <div>
+      <label>Columnas:</label>
+      <input type="number" name="cols" [(ngModel)]="cols">
+    </div>
+  </div>
+  <table class="table">
+    <tbody class="tbody">
+      <tr *ngFor="let row of board; let i = index">
+        <td *ngFor="let cell of row; let j = index">
+          <img src={{cell.image}} (click)="checkShot(cell, i, j)" />
+        </td>
+      </tr>
+    </tbody>
+    <button class="button" (click)="drawBoard()">Start game</button>
+  </table>
+</div>

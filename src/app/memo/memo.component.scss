@@ -1,0 +1,49 @@
+.memo{
+    min-height: 100vh;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.but{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button{
+    margin: 40px auto;
+    width: 150px;
+    height: 50px;
+    background-color: lightblue;
+    border-radius: 30px;
+    border-style: hidden;
+    justify-self: center;
+    
+}
+
+.button:hover {
+    background-color: rgba(27, 197, 253, 0.727);
+    transform: scale(1.2)
+    ;
+}
+
+.game{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    margin: 30px auto;
+    justify-content: space-evenly;
+
+}
+
+.img{
+    height: 150px;
+
+}
+
+.disable-click {
+    pointer-events: none;
+}
