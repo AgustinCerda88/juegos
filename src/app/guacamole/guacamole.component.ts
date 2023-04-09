@@ -3,10 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-guacamole',
   templateUrl: './guacamole.component.html',
-  styleUrls: ['./guacamole.component.scss']
+  styleUrls: ['./guacamole.component.scss'],
 })
 export class GuacamoleComponent implements OnInit {
-  
   squares = Array(9).fill(null);
   timeLeft = 30;
   score = 0;
@@ -15,6 +14,7 @@ export class GuacamoleComponent implements OnInit {
   randomSquareInterval: any;
   countDownInterval: any;
   gameStarted = false;
+  isGameInProgress = false;
 
   ngOnInit() {
     this.addSquaresListeners();
@@ -26,6 +26,7 @@ export class GuacamoleComponent implements OnInit {
     this.gameOver = false;
     this.score = 0;
     this.timeLeft = 30;
+    this.isGameInProgress = true;
   }
 
   randomSquare() {
@@ -34,10 +35,6 @@ export class GuacamoleComponent implements OnInit {
     }
     const randomNumber = Math.floor(Math.random() * 9);
     this.squares[randomNumber] = true;
-    console.log(this.squares);
-
-    
-
     this.hitPosition = randomNumber;
   }
 
@@ -57,8 +54,8 @@ export class GuacamoleComponent implements OnInit {
     if (this.timeLeft === 0) {
       clearInterval(this.randomSquareInterval);
       clearInterval(this.countDownInterval);
-      this.gameOver = true;
+      this.gameOver = true
+      this.isGameInProgress = false;
     }
   }
-
 }
